@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Stars } from '@react-three/drei'
+import { Sky, Stars } from '@react-three/drei'
 
 function Box(props) {
   // This reference will give us direct access to the mesh
@@ -44,6 +44,7 @@ export default function App() {
         <pointLight position={[10, 10, 10]} intensity={0.1} />
         <Box position={[-1.2, 0, 0]} />
         <Box position={[1.2, 0, 0]} />
+        <Sky />
         <Stars />
       </Canvas>
     </View>
