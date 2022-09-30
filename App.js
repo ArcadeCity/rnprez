@@ -1,6 +1,6 @@
-// import { SlideScene } from './src/SlideScene'
-import { SphereScene } from './src/SphereScene'
+import Scene from './src/SlideScene'
+// import Scene from './src/SphereScene'
 
 export default function App() {
-  return <SphereScene />
+  return <Scene />
 }

@@ -15,7 +15,7 @@ const instancedGeometry = {
   sphere: Spheres,
 }
 
-export function SphereScene() {
+export default function SphereScene() {
   const [number] = useState(100)
   const [size] = useState(0.3)
 

@@ -27,7 +27,8 @@
     "react-dom": "18.0.0",
     "react-native": "0.69.6",
     "react-native-web": "~0.18.7",
-    "three": "^0.143.0"
+    "three": "^0.143.0",
+    "valtio": "^1.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
