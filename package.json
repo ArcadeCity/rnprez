@@ -22,6 +22,7 @@
     "expo-modules-core": "~0.11.3",
     "expo-status-bar": "~1.4.0",
     "expo-three": "^6.1.0",
+    "nice-color-palettes": "^3.0.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-native": "0.69.6",
