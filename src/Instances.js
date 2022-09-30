@@ -15,7 +15,7 @@ export const Spheres = ({ colors, number, size }) => {
   )
   useFrame(() => at(Math.floor(Math.random() * number)).position.set(0, Math.random() * 2, 0))
   return (
-    <instancedMesh receiveShadow castShadow ref={ref} args={[undefined, undefined, number]}>
+    <instancedMesh castShadow ref={ref} args={[undefined, undefined, number]}>
       <sphereBufferGeometry args={[size, 48]}>
         <instancedBufferAttribute attach='attributes-color' args={[colors, 3]} />
       </sphereBufferGeometry>
