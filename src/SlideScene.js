@@ -90,6 +90,7 @@ export default function SlideScene() {
   return (
     <Suspense fallback={null}>
       <Canvas
+        style={{ backgroundColor: '#120B29' }}
         gl={{ antialias: false }}
         dpr={[1, 1.5]}
         onPointerMissed={() => (state.clicked = null)}>
