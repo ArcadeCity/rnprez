@@ -1,9 +1,10 @@
 import { Suspense, useRef, useState } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, Sky, Stars } from '@react-three/drei'
+import { OrbitControls, PointerLockControls, Sky, Stars } from '@react-three/drei'
 import { Ground } from './src/Ground'
-import { Physics } from '@react-three/rapier'
+import { Player } from './src/Player'
+import { Physics } from '@react-three/cannon'
 
 function Box(props) {
   // This reference will give us direct access to the mesh
@@ -14,11 +15,11 @@ function Box(props) {
   const [active, setActive] = useState(false)
 
   // Rotate mesh every frame, this is outside of React without overhead
-  useFrame(() => {
-    if (mesh && mesh.current) {
-      mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-    }
-  })
+  // useFrame(() => {
+  //   if (mesh && mesh.current) {
+  //     mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+  //   }
+  // })
 
   return (
     <mesh
@@ -37,19 +38,20 @@ function Box(props) {
 export default function App() {
   return (
     <View style={styles.container}>
-      <Canvas>
+      <Canvas shadows camera={{ fov: 45 }}>
         <ambientLight intensity={1} />
         <pointLight position={[10, 10, 10]} intensity={1} />
-        <Box position={[-1.2, 2, 0]} />
-        <Box position={[1.2, 2, 0]} />
-        <Sky />
+        <Sky sunPosition={[100, 20, 100]} />
         <Stars />
         <Suspense>
-          <Physics>
+          <Physics gravity={[0, -30, 0]}>
+            <Box position={[-1.2, 2, 0]} />
+            <Box position={[1.2, 2, 0]} />
+            <Player />
             <Ground />
           </Physics>
+          <PointerLockControls />
         </Suspense>
-        <OrbitControls />
       </Canvas>
     </View>
   )
