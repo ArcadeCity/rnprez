@@ -42,8 +42,11 @@ export default function App() {
         <Stars />
         <Suspense>
           <Physics gravity={[0, -30, 0]}>
-            <Box position={[-1.2, 2, 0]} />
-            <Box position={[1.2, 2, 0]} />
+            <Box position={[-1.2, 2, 0]} message='UR INSIDE A REACT NATIVE WORLD RIGHT NOW!' />
+            <Box
+              position={[1.2, 2, 0]}
+              message='i am a react component! click/hover to change my state'
+            />
             <Player />
             <Ground />
             <InstancedGeometry {...{ colors, number, size }} />
