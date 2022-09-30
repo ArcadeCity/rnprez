@@ -37,7 +37,7 @@ export function Box({ message = 'messgage', ...props }) {
       <boxBufferGeometry attach='geometry' args={[1, 1, 1]} />
       <meshStandardMaterial attach='material' color={hovered ? 'hotpink' : 'orange'} />
       <Html center>
-        <h1 style={{ fontFamily: 'monospace', color: 'white' }}>{message}</h1>
+        <h2 style={{ fontFamily: 'monospace', color: 'white' }}>{message}</h2>
       </Html>
     </mesh>
   )
