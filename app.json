@@ -27,7 +27,9 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.ico",
+      "name": "React Native for Noobs",
+      "themeColor": "#000000"
     }
   }
 }
