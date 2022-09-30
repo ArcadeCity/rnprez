@@ -1,22 +1,24 @@
-import { useRef, useState } from "react";
-import { StyleSheet, View } from "react-native";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Sky, Stars } from '@react-three/drei'
+import { Suspense, useRef, useState } from 'react'
+import { StyleSheet, View } from 'react-native'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { OrbitControls, Sky, Stars } from '@react-three/drei'
+import { Ground } from './src/Ground'
+import { Physics } from '@react-three/rapier'
 
 function Box(props) {
   // This reference will give us direct access to the mesh
-  const mesh = useRef();
+  const mesh = useRef()
 
   // Set up state for the hovered and active state
-  const [hovered, setHover] = useState(false);
-  const [active, setActive] = useState(false);
+  const [hovered, setHover] = useState(false)
+  const [active, setActive] = useState(false)
 
   // Rotate mesh every frame, this is outside of React without overhead
   useFrame(() => {
     if (mesh && mesh.current) {
-      mesh.current.rotation.x = mesh.current.rotation.y += 0.01;
+      mesh.current.rotation.x = mesh.current.rotation.y += 0.01
     }
-  });
+  })
 
   return (
     <mesh
@@ -25,35 +27,37 @@ function Box(props) {
       scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
       onClick={(e) => setActive(!active)}
       onPointerOver={(e) => setHover(true)}
-      onPointerOut={(e) => setHover(false)}
-    >
-      <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-      <meshStandardMaterial
-        attach="material"
-        color={hovered ? "hotpink" : "orange"}
-      />
+      onPointerOut={(e) => setHover(false)}>
+      <boxBufferGeometry attach='geometry' args={[1, 1, 1]} />
+      <meshStandardMaterial attach='material' color={hovered ? 'hotpink' : 'orange'} />
     </mesh>
-  );
+  )
 }
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Canvas>
-        <ambientLight intensity={0.1} />
-        <pointLight position={[10, 10, 10]} intensity={0.1} />
-        <Box position={[-1.2, 0, 0]} />
-        <Box position={[1.2, 0, 0]} />
+        <ambientLight intensity={1} />
+        <pointLight position={[10, 10, 10]} intensity={1} />
+        <Box position={[-1.2, 2, 0]} />
+        <Box position={[1.2, 2, 0]} />
         <Sky />
         <Stars />
+        <Suspense>
+          <Physics>
+            <Ground />
+          </Physics>
+        </Suspense>
+        <OrbitControls />
       </Canvas>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "black",
+    backgroundColor: 'black',
   },
-});
+})

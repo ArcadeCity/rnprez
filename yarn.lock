@@ -1103,6 +1103,11 @@
   resolved "https://registry.yarnpkg.com/@chevrotain/utils/-/utils-10.3.0.tgz#a5c02c388207d032b563bfc3f051fec646192920"
   integrity sha512-KCpFcX+kNyKlVZQW60ZUGRW5Nsg5u0F2CIgHiDQyg282ouHS9xap2ZEKqhwGE/0nYP46nAPnGPdb/IYh7ZHOsA==
 
+"@dimforge/rapier3d-compat@0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@dimforge/rapier3d-compat/-/rapier3d-compat-0.9.0.tgz#c1a3c41fa39ae7d8dde22ef628baedf2b8f24dad"
+  integrity sha512-zjgpXS/fFx1lZqjW1DfVUEaRHFpekzWjF6eSGb/xeEUf74YO0NDlQ93Hj0oI2k+i6QIoQk9KcIaEGwQZkullrw==
+
 "@expo/browser-polyfill@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@expo/browser-polyfill/-/browser-polyfill-1.0.0.tgz#2d93ae0feb3ccc90b78a98f277f8f8ed8bcbd37d"
@@ -1863,6 +1868,15 @@
     scheduler "^0.21.0"
     suspend-react "^0.0.8"
     zustand "^3.7.1"
+
+"@react-three/rapier@^0.7.2":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@react-three/rapier/-/rapier-0.7.2.tgz#5f90c50acb9e4ca3ceebac04a136c4746b8f4d67"
+  integrity sha512-5yDMBgvKCKvr3aWFKiXPoHgVlY+bBEDxclWD7sR7q4lGuGK/afyNuZpBQtZLaARcH9KJ+9/RSfgzavCIug8iFQ==
+  dependencies:
+    "@dimforge/rapier3d-compat" "0.9.0"
+    three-stdlib "^2.15.0"
+    use-asset "^1.0.4"
 
 "@segment/loosely-validate-event@^2.0.0":
   version "2.0.0"
@@ -4768,7 +4782,7 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-fast-deep-equal@^3.1.1:
+fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
@@ -10070,7 +10084,7 @@ three-mesh-bvh@^0.5.15:
   resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.5.16.tgz#ed8518355fb70d7da6a5537558ba43f76a56b067"
   integrity sha512-kN3QGKJNiQQcuiOsjVIkjtPnV3PJa+0Orih2E52afa+kQfs3zfoYt6Kxn6b6RNiAfaQ+7ckwPK0mTVFVl2F2LA==
 
-three-stdlib@2.17.0:
+three-stdlib@2.17.0, three-stdlib@^2.15.0:
   version "2.17.0"
   resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.17.0.tgz#5915b110ec6dbf07e0e653bd59889293c7b93407"
   integrity sha512-m19X4+ajh+2EJIVcjB288LgbqTli5b8kFahJlg9oNCBfaL8geCgEoM4OUirgV0Ez6Lr58N1MPBR6LjJt7ALfKQ==
@@ -10478,6 +10492,13 @@ url@^0.11.0:
   dependencies:
     punycode "1.3.2"
     querystring "0.2.0"
+
+use-asset@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/use-asset/-/use-asset-1.0.4.tgz#506caafc29f602890593799e58b577b70293a6e2"
+  integrity sha512-7/hqDrWa0iMnCoET9W1T07EmD4Eg/Wmoj/X8TGBc++ECRK4m5yTsjP4O6s0yagbxfqIOuUkIxe2/sA+VR2GxZA==
+  dependencies:
+    fast-deep-equal "^3.1.3"
 
 use-sync-external-store@^1.0.0:
   version "1.2.0"
