@@ -1,4 +1,5 @@
-import SphereScene from './src/SphereScene'
+// import { SlideScene } from './src/SlideScene'
+import { SphereScene } from './src/SphereScene'
 
 export default function App() {
   return <SphereScene />

@@ -15,8 +15,7 @@ const instancedGeometry = {
   sphere: Spheres,
 }
 
-export default function App() {
-  const [geometry, setGeometry] = useState('sphere')
+export function SphereScene() {
   const [number] = useState(100)
   const [size] = useState(0.3)
 
@@ -31,7 +30,7 @@ export default function App() {
     return array
   }, [number])
 
-  const InstancedGeometry = instancedGeometry[geometry]
+  const InstancedGeometry = instancedGeometry['sphere']
   const OtherInstancedGeometry = instancedGeometry['box']
 
   return (
