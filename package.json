@@ -9,15 +9,20 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@react-three/fiber": "^8.3.1",
     "@expo/webpack-config": "^0.17.0",
+    "@react-spring/three": "^9.5.5",
+    "@react-three/cannon": "^6.4.0",
+    "@react-three/drei": "^9.32.4",
+    "@react-three/fiber": "^8.3.1",
+    "@react-three/rapier": "^0.7.2",
     "expo": "~46.0.13",
     "expo-asset": "~8.6.1",
     "expo-file-system": "~14.1.0",
     "expo-gl": "~11.4.0",
     "expo-modules-core": "~0.11.3",
-    "expo-three": "^6.1.0",
     "expo-status-bar": "~1.4.0",
+    "expo-three": "^6.1.0",
+    "nice-color-palettes": "^3.0.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-native": "0.69.6",
@@ -27,5 +32,25 @@
   "devDependencies": {
     "@babel/core": "^7.12.9"
   },
-  "private": true
+  "private": true,
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "embeddedLanguageFormatting": "auto",
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": true,
+    "printWidth": 100,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": false
+  }
 }
