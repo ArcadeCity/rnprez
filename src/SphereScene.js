@@ -6,6 +6,7 @@ import { Html, PointerLockControls, Sky, Stars } from '@react-three/drei'
 import { Ground } from './Ground'
 import { Box } from './Box'
 import { Player } from './Player'
+import { Phone } from './Phone'
 import { Physics } from '@react-three/cannon'
 import { Boxes, Spheres } from './Instances'
 import niceColors from 'nice-color-palettes'
@@ -42,6 +43,7 @@ export default function SphereScene() {
         <Stars />
         <Suspense>
           <Physics gravity={[0, -30, 0]}>
+            <Phone />
             <Box position={[-1.2, 2, 0]} message='UR INSIDE A REACT NATIVE WORLD RIGHT NOW!' />
             <Box
               position={[1.2, 2, 0]}
