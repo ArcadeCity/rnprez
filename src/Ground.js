@@ -12,9 +12,7 @@ export const Ground = (props) => {
       <planeGeometry args={[1000, 1000]} />
       <meshStandardMaterial map={texture} map-repeat={[240, 240]} color='green' />
       <Html center>
-        <h1 style={{ fontFamily: 'monospace', color: 'white', fontSize: 32 }}>
-          Welcome to React Native for Noobs
-        </h1>
+        <h1 style={{ marginTop: -230, fontFamily: 'monospace', color: 'white', fontSize: 34 }}></h1>
       </Html>
     </mesh>
   )
