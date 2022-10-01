@@ -31,7 +31,10 @@ export function Box({ message = 'messgage', ...props }) {
       {...props}
       ref={ref}
       scale={active ? [1.25, 1.25, 1.25] : [1, 1, 1]}
-      onClick={(e) => setActive(!active)}
+      onClick={(e) => {
+        setActive(!active)
+        // window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')
+      }}
       onPointerOver={(e) => setHover(true)}
       onPointerOut={(e) => setHover(false)}>
       <boxBufferGeometry attach='geometry' args={[1, 1, 1]} />

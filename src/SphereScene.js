@@ -2,7 +2,7 @@ import { Suspense, useMemo, useState } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Canvas } from '@react-three/fiber'
 import * as THREE from 'three'
-import { PointerLockControls, Sky, Stars } from '@react-three/drei'
+import { Html, PointerLockControls, Sky, Stars } from '@react-three/drei'
 import { Ground } from './Ground'
 import { Box } from './Box'
 import { Player } from './Player'
@@ -55,6 +55,17 @@ export default function SphereScene() {
           <PointerLockControls />
         </Suspense>
       </Canvas>
+      <View
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          width: 10,
+          height: 10,
+          borderRadius: 5,
+          backgroundColor: 'rgba(255,255,255,0.5)',
+        }}
+      />
     </View>
   )
 }
