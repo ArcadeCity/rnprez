@@ -92,17 +92,17 @@ export default function SphereScene() {
               message='EXPO SNACK'
             />
             <Phone
-              position={[8, 2, phonedepth + 2]}
-              rotation={[0, -0.4, 0]}
+              position={[4, 2, phonedepth + 2]}
+              rotation={[0, -0.2, 0]}
               url='https://snack.expo.dev/@acx2/belligerent-almond'
               message='Pre-made LNpay wallet snack'
             />
-            {/* <Phone
-              position={[4, 2, phonedepth + 1]}
-              rotation={[0, -0.2, 0]}
+            <Phone
+              position={[8, 2, phonedepth + 1]}
+              rotation={[0, -0.4, 0]}
               url='https://www.lnpay.co'
               message='Sign up for LNpay'
-            /> */}
+            />
             <Phone
               position={[12, 2, phonedepth + 3]}
               rotation={[0, -0.6, 0]}
