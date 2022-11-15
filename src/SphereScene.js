@@ -45,7 +45,7 @@ export default function SphereScene() {
         <Stars />
         <Suspense>
           <Physics gravity={[0, -30, 0]}>
-            <Phone position={[0, 8, 0]} message='Welcome to React Native for Noobs!' />
+            <Phone position={[0, 8, 0]} message='Building a Lightning wallet with React Native!' />
             <Box position={[-1.2, 2, 0]} message='UR INSIDE A REACT NATIVE WORLD RIGHT NOW!' />
 
             <Box

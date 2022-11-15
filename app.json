@@ -14,9 +14,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -28,7 +26,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png",
-      "name": "React Native for Noobs",
+      "name": "Building a Lightning wallet with React Native",
       "themeColor": "#000000"
     }
   }
