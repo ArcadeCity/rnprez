@@ -92,22 +92,22 @@ export default function SphereScene() {
               message='EXPO SNACK'
             />
             <Phone
+              position={[8, 2, phonedepth + 2]}
+              rotation={[0, -0.4, 0]}
+              url='https://snack.expo.dev/@acx2/belligerent-almond'
+              message='Pre-made LNpay wallet snack'
+            />
+            {/* <Phone
               position={[4, 2, phonedepth + 1]}
               rotation={[0, -0.2, 0]}
               url='https://www.lnpay.co'
               message='Sign up for LNpay'
-            />
-            <Phone
-              position={[8, 2, phonedepth + 2]}
-              rotation={[0, -0.4, 0]}
-              url='https://makers.bolt.fun/tournaments/1/overview'
-              message='Join Legends of Lightning tournament!'
-            />
+            /> */}
             <Phone
               position={[12, 2, phonedepth + 3]}
               rotation={[0, -0.6, 0]}
-              url='https://arcadelabs.co'
-              message='Arcade Labs site'
+              url='https://github.com/ArcadeCity/rnprez'
+              message='GitHub repo for this code'
             />
           </Physics>
           <PointerLockControls />
