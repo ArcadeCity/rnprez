@@ -26,7 +26,7 @@ export function Phone(props) {
         <group position={[0, -0.03, 0.11]} rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <Html center>
             {props.message ? (
-              <h1 style={{ fontFamily: 'monospace', color: '#5B20F2', fontSize: 32 }}>
+              <h1 style={{ fontFamily: 'monospace', color: '#5B20F2', fontSize: 28 }}>
                 {props.message}
               </h1>
             ) : null}
